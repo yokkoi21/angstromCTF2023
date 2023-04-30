@@ -1,0 +1,11 @@
+120字のフラグを30文字ずつ4つのchunkに分けてswap操作をしているので下から逆展開
+
+{"7e08250c4aaa9ed206fd7c9e398e2}", "actf{cl1ent_s1de_sucks_544e67e", "f12024523398ee02fe7517fffa9251", "6317199e454f4d2bdb04d9e419ccc7"}
+↓# 3つ目と4つ目をの文字列を交換
+{"7e08250c4aaa9ed206fd7c9e398e2}", "actf{cl1ent_s1de_sucks_544e67e", "6317199e454f4d2bdb04d9e419ccc7", "f12024523398ee02fe7517fffa9251"}
+↓# 2つ目と4つ目をの文字列を交換
+{"7e08250c4aaa9ed206fd7c9e398e2}", "f12024523398ee02fe7517fffa9251", "6317199e454f4d2bdb04d9e419ccc7", "actf{cl1ent_s1de_sucks_544e67e"}
+↓# 2つ目と3つ目をの文字列を交換
+{"7e08250c4aaa9ed206fd7c9e398e2}", "6317199e454f4d2bdb04d9e419ccc7", "f12024523398ee02fe7517fffa9251", "actf{cl1ent_s1de_sucks_544e67e"}
+↓# 1つ目と4つ目をの文字列を交換
+{"actf{cl1ent_s1de_sucks_544e67e", "6317199e454f4d2bdb04d9e419ccc7", "f12024523398ee02fe7517fffa9251", "7e08250c4aaa9ed206fd7c9e398e2}"}

@@ -1,0 +1,22 @@
+Welcome to Celeste speedrun records!!!
+Current record holders (beat them at /play for a flag!):
+Old Lady: 0 seconds
+Madeline: 10 seconds
+Badeline: 10.1 seconds
+
+https://mount-tunnel.web.actf.co/playにアクセスすると以下のHTML
+
+<form action="/submit" method="POST">
+  <input type="text" style="display: none;" value="1682425356.1451485" name="start" />
+  <input type="submit" value="Press when done!" />
+</form>
+
+start変数がリクエストを送った時間になるようなので，ボタンを押して/submitに遷移してPOSTでリクエストを送って変数とサーバ側の時間の差でOld Ladyを倒せば勝ちということかな？
+最初はcurlで変数を取得してcurlで瞬時にリクエストを送ろうと思ったが，Old Ladyが0 secondsなのでどうやっても勝てないじゃん．．．
+と思っていたら，マイナスにすればいいのか？と思いつき未来時間をUNIX時間に変更してstart変数に入れて，/submitにリクエストを送ったところフラグゲット！
+
+日付→UNIX時間変換サイト
+https://keisan.casio.jp/exec/system/1526003938
+
+❯ curl -s https://mount-tunnel.web.actf.co/submit -X POST -d "start=1682425814"
+you win the flag: actf{wait_until_farewell_speedrun}

@@ -1,0 +1,2 @@
+❯ nc challs.actf.co 31337
+actf{me0w_m3ow_welcome_to_angstr0mctf}
